@@ -40,16 +40,16 @@ function Navbar() {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">
+          <a href="/" className="block px-4 py-2 text-white hover:bg-gray-700">
             Home
           </a>
-          <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">
+          <a href="/About" className="block px-4 py-2 text-white hover:bg-gray-700">
             About
           </a>
-          <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">
+          <a href="/CB" className="block px-4 py-2 text-white hover:bg-gray-700">
             Services
           </a>
-          <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">
+          <a href="https://wa.me/919780400311" className="block px-4 py-2 text-white hover:bg-gray-700">
             Contact
           </a>
         </div>
