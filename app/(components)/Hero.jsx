@@ -44,7 +44,7 @@ export default function Navbar() {
             </Link>
           </h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-            Everything Certificate you need for showcasing
+            Every Certificate you need for showcasing!
           </p>
           <p className="mt-6 text-lg/8 text-gray-600">
             CB’s mission is simple yet profound: to transform the way we
