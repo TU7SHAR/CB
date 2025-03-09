@@ -11,8 +11,11 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "axios": "^1.8.2",
+    "dotenv": "^16.4.7",
     "html-to-image": "^1.11.13",
     "jspdf": "^3.0.0",
+    "mongoose": "^8.12.1",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

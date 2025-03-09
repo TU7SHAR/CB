@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./(components)/Navbar";
@@ -60,8 +61,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-black bg-[#E0E0E0]`}
       >
-        <Navbar />
-        {children}
+        {" "}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+          {children}
+        </Suspense>
       </body>
     </html>
   );

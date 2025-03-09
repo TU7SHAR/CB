@@ -25,11 +25,15 @@ function Navbar() {
           <Link href="/About" className="text-white hover:text-gray-300">
             About
           </Link>
+
           <Link
             href="https://wa.me/919780400311"
             className="text-white hover:text-gray-300"
           >
             Contact
+          </Link>
+          <Link href="/Login" className="text-white hover:text-purple-500">
+            Login
           </Link>
         </div>
         <div className="md:hidden flex items-center">
@@ -40,18 +44,36 @@ function Navbar() {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <a href="/" className="block px-4 py-2 text-white hover:bg-gray-700">
+          <Link
+            href="/"
+            className="block px-4 py-2 text-white hover:bg-gray-700"
+          >
             Home
-          </a>
-          <a href="/About" className="block px-4 py-2 text-white hover:bg-gray-700">
+          </Link>
+          <Link
+            href="/About"
+            className="block px-4 py-2 text-white hover:bg-gray-700"
+          >
             About
-          </a>
-          <a href="/CB" className="block px-4 py-2 text-white hover:bg-gray-700">
+          </Link>
+          <Link
+            href="/CB"
+            className="block px-4 py-2 text-white hover:bg-gray-700"
+          >
             Services
-          </a>
-          <a href="https://wa.me/919780400311" className="block px-4 py-2 text-white hover:bg-gray-700">
+          </Link>
+          <Link
+            href="/Login"
+            className="block px-4 py-2 text-white hover:bg-gray-700"
+          >
+            Login
+          </Link>
+          <Link
+            href="https://wa.me/919780400311"
+            className="block px-4 py-2 text-white hover:bg-gray-700"
+          >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
