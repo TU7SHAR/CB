@@ -1,6 +1,8 @@
 import connectDB from "@/lib/connection";
 import users from "@/models/users";
 import { NextResponse } from "next/server";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs";
 
 export async function POST(request) {
   try {
@@ -20,6 +22,15 @@ export async function POST(request) {
     } else
       return NextResponse.json({ msg: "Incorrect Values!" }, { status: 400 });
 
+    const token = jwt.sign(
+      {
+        mail: mail,
+        pwd: pwd,
+      },
+      process.env.secret_key,
+      { expiresIn: "30d" }
+    );
+
     return NextResponse.json(
       {
         msg: "Login Success!",
@@ -27,7 +38,9 @@ export async function POST(request) {
         mobile: user.mobile,
         mail: user.mail,
         _id: user._id,
+        token: token,
       },
+      { token },
       { status: 200 }
     );
   } catch (error) {

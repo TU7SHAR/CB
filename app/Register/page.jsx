@@ -2,9 +2,11 @@
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function page() {
+  const router = useRouter();
   const [regData, setRegData] = useState({
     name: "",
     mail: "",
@@ -30,6 +32,7 @@ export default function page() {
         console.log("Use Created Success!");
         const userId = response._id;
         localStorage.setItem("userID: ", userId);
+        router.push("/Success");
       }
     } catch (error) {
       if (error.response) {

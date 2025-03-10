@@ -37,6 +37,7 @@ export default function page() {
       }
     } catch (error) {
       console.log(error);
+      if (error.response.status === 400) alert("Incorrect Values!");
     }
   };
   return (
