@@ -40,7 +40,6 @@ export async function POST(request) {
         _id: user._id,
         token: token,
       },
-      { token },
       { status: 200 }
     );
   } catch (error) {

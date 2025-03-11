@@ -25,8 +25,14 @@ export default function page() {
       });
 
       if (response.status === 200) {
-        const { name: Name, mobile: Mobile, mail: Mail, _id } = response.data;
-
+        const {
+          name: Name,
+          mobile: Mobile,
+          token: token,
+          mail: Mail,
+          _id,
+        } = response.data;
+        localStorage.setItem("token", token);
         router.push(
           `/AccInfo?Name=${encodeURIComponent(
             Name

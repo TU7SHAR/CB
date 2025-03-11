@@ -32,6 +32,7 @@ export default function page() {
         console.log("Use Created Success!");
         const userId = response._id;
         localStorage.setItem("userID: ", userId);
+
         router.push("/Success");
       }
     } catch (error) {
